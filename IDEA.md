@@ -40,7 +40,7 @@ contracts; only the lead changes it.
 
 | Area | Directories | Owner | Issues |
 |---|---|---|---|
-| core | `triage/__init__.py`, `triage/__main__.py`, `triage/model.py`, `tests/__init__.py`, `tests/test_cli.py` | @atiladeokegab (Zeus) | T-231 |
-| ingest | `triage/ingest/`, `tests/ingest/` | @Atilmatrix | T-232 |
-| classify | `triage/classify/`, `tests/classify/` | @atiladeokegab (Prometheus) | T-233 |
-| pool | `samples/`, `docs/demo.md` | pool | T-234, T-235 |
+| core | `triage/__init__.py`, `triage/__main__.py`, `triage/model.py`, `tests/__init__.py`, `tests/test_cli.py` | @atiladeokegab (Zeus) | #1 |
+| ingest | `triage/ingest/`, `tests/ingest/` | @Atilmatrix | #2 |
+| classify | `triage/classify/`, `tests/classify/` | @atiladeokegab (Prometheus) | #3 |
+| pool | `samples/`, `docs/demo.md` | pool | #4, #5 |
