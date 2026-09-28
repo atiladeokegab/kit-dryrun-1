@@ -9,6 +9,10 @@ class SplitTests(unittest.TestCase):
         self.assertEqual([(m.id, m.text) for m in messages],
                          [(1, "first message"), (2, "second message"), (3, "third message")])
 
+    def test_star_and_em_dash_lines_are_boundaries(self):
+        messages = split("one\n***\ntwo\n—\nthree\n---\nfour")
+        self.assertEqual([m.text for m in messages], ["one", "two", "three", "four"])
+
     def test_email_headers_and_signoff(self):
         text = ("From: Priya Shah <priya@example.com>\nTo: agent@example.com\n"
                 "Subject: Water\nDate: Mon, 28 Sep 2026 07:12\n\n"

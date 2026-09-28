@@ -5,7 +5,7 @@ import re
 from triage.model import Message
 
 
-_DASHES = re.compile(r"-{3,}\Z")
+_SEPARATOR = re.compile(r"(?:-{3,}|\*{3}|—)\Z")
 _SMS_TIME = re.compile(r"\[(\d{2}:\d{2})\]\s+([^:]+):\s*(.*)\Z")
 _SMS_DATE = re.compile(r"(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})\s+-\s+([^:]+):\s*(.*)\Z")
 _VOICEMAIL = re.compile(r"(Voicemail\s+\d{2}:\d{2}):\s*(.*)\Z", re.I)
@@ -29,7 +29,7 @@ def split(text: str) -> list[Message]:
 
     for raw in text.splitlines():
         line = raw.strip()
-        if _DASHES.fullmatch(line):
+        if _SEPARATOR.fullmatch(line):
             flush()
             pending_blank = False
             continue
