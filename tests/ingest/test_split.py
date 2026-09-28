@@ -41,7 +41,7 @@ class SplitTests(unittest.TestCase):
     def test_windows_line_endings_and_empty_input(self):
         messages = split("one\r\n\r\ntwo\r\n---\r\nthree\r\n")
         self.assertEqual([m.text for m in messages], ["one", "two", "three"])
-        self.assertEqual(split(" \n\r\n -- \n "), [])
+        self.assertEqual(split(" \n\r\n \t\n "), [])
 
 
 if __name__ == "__main__":
