@@ -38,6 +38,12 @@ class SplitTests(unittest.TestCase):
         self.assertEqual((message.sender, message.received, message.text),
                          ("", "Voicemail 09:40", "hi it is Priya from flat 3"))
 
+    def test_voicemail_does_not_inherit_previous_sender(self):
+        messages = split("[09:14] +447700900123: first\n---\n"
+                         "Voicemail 09:40: hi it is Priya from flat 3")
+        self.assertEqual((messages[1].sender, messages[1].received),
+                         ("", "Voicemail 09:40"))
+
     def test_windows_line_endings_and_empty_input(self):
         messages = split("one\r\n\r\ntwo\r\n---\r\nthree\r\n")
         self.assertEqual([m.text for m in messages], ["one", "two", "three"])
