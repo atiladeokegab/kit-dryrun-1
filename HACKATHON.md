@@ -5,10 +5,7 @@ One track. This is a rehearsal event: the brief, data and deadlines are fake.
 
 Official rules: none (rehearsal). The idea and the areas: [IDEA.md](IDEA.md).
 
-Smoke: `python3 -m unittest discover -s tests -t .`
-
-(Once `samples/monday.txt` and both areas have landed, the smoke becomes
-`python3 -m unittest discover -s tests -t . && python3 -m triage samples/monday.txt`.)
+Smoke: `python3 -m unittest discover -s tests -t . && python3 -m triage samples/monday.txt`
 
 The product that ships is `main`: the last commit that passed the smoke check.
 
