@@ -44,4 +44,4 @@ contracts; only the lead changes it.
 | ingest | `triage/ingest/`, `tests/ingest/` | @Atilmatrix | #2 |
 | classify | `triage/classify/`, `tests/classify/` | @Atilmatrix (Prometheus, the lead's builder agent) | #3 |
 | pool | `samples/` | @atiladeokegab (Zeus) | #4 |
-| pool | `docs/demo.md` | pool | #5 |
+| pool (claimed) | `docs/demo.md`, `samples/quiet.txt` (change-request #17) | @Atilmatrix (Matrix) | #5 |
