@@ -1,0 +1,9 @@
+[09:00] +447700900111: Is visitor parking bay 14 available on Saturday?
+---
+[09:05] +447700900222: Thanks for fixing the gate last week.
+---
+From: Robin Lee <robin@example.com>
+Subject: September rent receipt
+Date: Mon, 28 Sep 2026 09:10
+
+Could you send a receipt for September rent?
