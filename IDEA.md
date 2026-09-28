@@ -5,23 +5,33 @@ complete. If your task doesn't fit this page, open a change-request (AGENTS.md Â
 
 ## Problem
 
-<Who has the problem, and what it costs them. Two or three sentences.>
+A letting agent opens Monday to a pile of tenant messages: emails, SMS, voicemail
+transcripts, pasted together. A burst pipe sits under a parking complaint, and nobody sees
+it until the ceiling comes down.
 
 ## The idea
 
-<What we build, in one paragraph.>
+`triage` is a command-line tool: give it a messy text dump of tenant messages and it splits
+them apart, tags each with an urgency (emergency, urgent, routine) and a category (leak,
+heating, electrical, pest, noise, admin, other) by keyword rules, and prints them
+most-urgent-first.
 
 ## What we build
 
-- <feature>
+- Split a messy dump into messages: blank lines, `---` separators, email headers, SMS timestamps
+- Urgency and category by keyword rules, with the matched words as the reason
+- `python3 -m triage FILE` prints a table, most urgent first; `--json` prints JSON
+- A sample dump in `samples/` covering the messy cases
 
 ## What we don't build
 
-- <tempting thing we are deliberately leaving out>
+- An LLM classifier (needs a key and makes the smoke non-deterministic)
+- A web UI, a database, email or SMS integration
+- Any dependency outside the Python standard library
 
 ## The demo, in one line
 
-<What the judges see in 30 seconds.>
+`python3 -m triage samples/monday.txt` turns 12 tangled messages into a list with the burst pipe on top.
 
 ## Areas and owners
 
@@ -30,5 +40,7 @@ contracts; only the lead changes it.
 
 | Area | Directories | Owner | Issues |
 |---|---|---|---|
-| core | <dirs> | @<lead handle> | #<n> |
-| <area> | <dirs> | @<handle> | #<n>, #<n> |
+| core | `triage/__init__.py`, `triage/__main__.py`, `triage/model.py`, `tests/__init__.py`, `tests/test_cli.py` | @atiladeokegab (Zeus) | T-231 |
+| ingest | `triage/ingest/`, `tests/ingest/` | @Atilmatrix | T-232 |
+| classify | `triage/classify/`, `tests/classify/` | @atiladeokegab (Prometheus) | T-233 |
+| pool | `samples/`, `docs/demo.md` | pool | T-234, T-235 |

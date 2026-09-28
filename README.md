@@ -1,13 +1,13 @@
-# <Project name>
+# triage
 
-<One paragraph: what we're building and who it's for.>
+A command-line tool for letting agents: give it a messy dump of tenant messages (emails, SMS, voicemail transcripts pasted together) and it prints them most-urgent-first, each tagged with an urgency, a category and the words that decided it. Python standard library only.
 
 What we're building and who owns which part: [IDEA.md](IDEA.md). Deadlines, rules and
 the team: [HACKATHON.md](HACKATHON.md).
 
 ## Quick start
 
-1. `gh repo clone <this repo>`
+1. `gh repo clone atiladeokegab/kit-dryrun-1`
 2. Open your AI tool (Claude Code, Codex, Cursor, Copilot…) in the folder.
 3. Tell it: *"Read AGENTS.md, then pick up my issue."*
 
@@ -228,4 +228,10 @@ Every one of these happened for real while this kit was tested.
 
 ## Architecture
 
-<!-- the lead adds the C4 diagrams here -->
+Planned design; the Architecture diagrams issue redraws these from the real code.
+
+![System context](docs/architecture/c4_context.png)
+
+![Containers](docs/architecture/c4_container.png)
+
+![Components of the triage CLI](docs/architecture/c4_component.png)
