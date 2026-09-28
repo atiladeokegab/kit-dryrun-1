@@ -6,7 +6,7 @@ from triage.model import CATEGORIES, Message, Triage
 
 
 _EMERGENCY = ("burst", "flood", "flooding", "gas smell", "smell of gas",
-              "sparks", "sparking", "fire", "smoke")
+              "sparks", "fire", "smoke")
 _URGENT = ("leak", "leaking", "drip", "no hot water", "boiler",
            "broken lock", "mould", "rats", "mice")
 _CATEGORY = {
