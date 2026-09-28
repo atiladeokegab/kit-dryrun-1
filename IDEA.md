@@ -42,5 +42,5 @@ contracts; only the lead changes it.
 |---|---|---|---|
 | core | `triage/__init__.py`, `triage/__main__.py`, `triage/model.py`, `tests/__init__.py`, `tests/test_cli.py` | @atiladeokegab (Zeus) | #1 |
 | ingest | `triage/ingest/`, `tests/ingest/` | @Atilmatrix | #2 |
-| classify | `triage/classify/`, `tests/classify/` | @atiladeokegab (Prometheus) | #3 |
+| classify | `triage/classify/`, `tests/classify/` | @Atilmatrix (Prometheus, the lead's builder agent) | #3 |
 | pool | `samples/`, `docs/demo.md` | pool | #4, #5 |
